@@ -1,0 +1,68 @@
+.product {
+  background: var(--color-surface);
+}
+
+.media {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 38%, var(--media-glow) 0%, transparent 62%),
+    var(--tint, var(--color-surface-2));
+}
+
+.bottle {
+  width: 62%;
+  padding-top: 6%;
+}
+
+.flag {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--card-pad);
+}
+
+.meta {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.name {
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+.notes {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+.price {
+  margin-top: var(--space-2);
+  font-weight: var(--weight-medium);
+}
+
+.size {
+  font-weight: var(--weight-regular);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 479px) {
+  .notes {
+    display: none;
+  }
+
+  .name {
+    font-size: var(--text-lg);
+  }
+}

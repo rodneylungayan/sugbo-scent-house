@@ -1,0 +1,80 @@
+.collection {
+  background: linear-gradient(160deg, var(--grad-a), var(--grad-b));
+  border-color: transparent;
+  color: var(--color-text);
+  min-height: 22rem;
+}
+
+.collection .link {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--space-4);
+  padding: var(--card-pad);
+  padding-bottom: 0;
+}
+
+.text {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.moods {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.name {
+  font-size: var(--text-3xl);
+  line-height: 1;
+}
+
+.line {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  max-width: 28ch;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.arrow {
+  transition: transform var(--transition);
+}
+
+.bottles {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4%;
+  padding-top: var(--space-4);
+  transform-origin: 50% 100%;
+}
+
+.bottle {
+  width: 30%;
+  margin-bottom: -6%;
+}
+
+.bottle[data-pos="1"] {
+  width: 37%;
+}
+
+.large .name {
+  font-size: var(--text-4xl);
+}
+
+@media (hover: hover) {
+  .collection:hover .arrow {
+    transform: translateX(4px);
+  }
+}

@@ -1,0 +1,11 @@
+.slot {
+  min-height: 1px;
+}
+
+.todo {
+  padding: var(--space-5);
+  border: 1px dashed var(--color-accent-soft);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}

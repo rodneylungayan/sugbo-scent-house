@@ -1,0 +1,122 @@
+.footer {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: var(--section-pad);
+  /* Room for the sticky mobile order bar */
+  padding-bottom: calc(var(--tap) + var(--space-7));
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-bottom: var(--space-5);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+  }
+}
+
+.brand {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+  align-content: start;
+}
+
+.tagline {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+.small {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 34ch;
+}
+
+.heading {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.links {
+  display: grid;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  text-decoration: none;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.contact {
+  display: grid;
+  gap: var(--space-3);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.contact li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  min-height: var(--tap);
+}
+
+.contact a {
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.toTop {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+@media (hover: hover) {
+  .links a:hover,
+  .contact a:hover,
+  .toTop:hover {
+    color: var(--color-accent);
+  }
+}

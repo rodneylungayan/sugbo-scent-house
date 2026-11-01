@@ -1,0 +1,24 @@
+.wrap {
+  display: grid;
+  align-items: center;
+  min-height: 60vh;
+  padding-block: var(--section-pad);
+  text-align: center;
+}
+
+.wrap > div {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: center;
+}
+
+.title {
+  font-size: var(--text-5xl);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}

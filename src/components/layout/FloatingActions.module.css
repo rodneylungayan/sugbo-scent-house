@@ -1,0 +1,63 @@
+.top {
+  position: fixed;
+  right: var(--gutter);
+  /* Sits above the mobile order bar (bar ≈ tap + 2 × space-3 + safe area) */
+  bottom: calc(var(--tap) + var(--space-6) + var(--space-4) + env(safe-area-inset-bottom));
+  z-index: var(--z-float);
+  display: grid;
+  place-items: center;
+  width: calc(var(--tap) + var(--space-1));
+  height: calc(var(--tap) + var(--space-1));
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition),
+    visibility var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+@media (min-width: 768px) {
+  .top {
+    bottom: var(--space-6);
+  }
+}
+
+@media (hover: hover) {
+  .top:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+    transform: translateY(var(--lift));
+  }
+}
+
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-float);
+  padding: var(--space-3) var(--gutter) calc(var(--space-3) + env(safe-area-inset-bottom));
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -8px 24px -16px var(--color-overlay);
+}
+
+@media (min-width: 768px) {
+  .bar {
+    display: none;
+  }
+}

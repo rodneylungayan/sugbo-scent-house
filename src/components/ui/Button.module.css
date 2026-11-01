@@ -1,0 +1,116 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.sm {
+  padding: var(--btn-pad-y-sm) var(--btn-pad-x-sm);
+  font-size: var(--text-xs);
+}
+
+.lg {
+  padding: calc(var(--btn-pad-y) * 1.15) calc(var(--btn-pad-x) * 1.15);
+}
+
+.full {
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+.primary {
+  background: var(--color-btn);
+  color: var(--color-btn-text);
+}
+
+.outline {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.light {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.text {
+  padding-inline: 0;
+  min-height: var(--tap);
+  color: var(--color-text);
+  border-radius: 0;
+  background: linear-gradient(currentColor, currentColor) left 85% / 0 1px no-repeat;
+}
+
+.icon,
+.iconStart {
+  transition: transform var(--transition);
+}
+
+@media (hover: hover) {
+  .primary:hover {
+    background: var(--color-btn-hover);
+    transform: translateY(var(--lift));
+    box-shadow: var(--shadow-md);
+  }
+
+  .outline:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+    transform: translateY(var(--lift));
+  }
+
+  .light:hover {
+    border-color: var(--color-text);
+    transform: translateY(var(--lift));
+    box-shadow: var(--shadow-md);
+  }
+
+  .text:hover {
+    background-size: 100% 1px;
+  }
+
+  .btn:hover .icon {
+    transform: translateX(4px);
+  }
+}
+
+.btn:focus-visible {
+  outline-offset: 4px;
+  border-radius: var(--radius-pill);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .btn:active {
+    transform: none;
+  }
+
+  .btn:hover .icon {
+    transform: none;
+  }
+}

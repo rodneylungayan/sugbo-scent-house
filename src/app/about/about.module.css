@@ -1,0 +1,60 @@
+.visual {
+  display: grid;
+  place-items: end center;
+  width: min(100%, 26rem);
+  aspect-ratio: 4 / 5;
+  padding-bottom: 12%;
+  border-radius: var(--radius-arch);
+  background:
+    radial-gradient(circle at 50% 35%, var(--color-surface) 0%, transparent 65%),
+    var(--color-surface-2);
+}
+
+.bottle {
+  width: 48%;
+}
+
+.prose {
+  display: grid;
+  gap: var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}
+
+.values {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.value {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.num {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: var(--text-3xl);
+  font-style: italic;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.valueTitle {
+  font-size: var(--text-2xl);
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "perfume-concept",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "todos": "node scripts/todos.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
+    "check:links": "node scripts/crawl.mjs http://localhost:3000"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "typescript": "^5"
+  },
+  "description": "Concept perfume store (Sugbo Scent House) — static Next.js site.",
+  "engines": {
+    "node": ">=20.9"
+  }
+}

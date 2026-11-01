@@ -1,0 +1,16 @@
+.bottle {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.labelText {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 3px;
+}
+
+.labelSub {
+  font-family: var(--font-body), system-ui, sans-serif;
+  letter-spacing: 1.6px;
+}

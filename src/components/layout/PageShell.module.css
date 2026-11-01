@@ -1,0 +1,36 @@
+.hero {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: var(--space-3);
+  padding-bottom: clamp(var(--space-7), 6vw, var(--space-9));
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heroGrid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+  margin-top: var(--space-5);
+}
+
+@media (min-width: 900px) {
+  .withVisual {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.heroText {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+  max-width: 44rem;
+}
+
+.h1 {
+  font-size: var(--text-5xl);
+}
+
+.visual {
+  display: grid;
+  place-items: center;
+}

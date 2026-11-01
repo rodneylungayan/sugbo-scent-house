@@ -1,0 +1,215 @@
+/*
+ * tokens.css — the ONLY place brand colours (hex values) live in CSS.
+ * Every component reads these variables, so changing a value here
+ * changes it across the whole site.
+ *
+ * Theme presets are picked with <html data-theme="..."> (set from
+ * config/features.ts). A section can switch to the dark "night" look
+ * with data-tone="night" (see <Section tone="night">).
+ */
+
+/* ---------- Shared scale (same for every theme) ---------- */
+:root {
+  /* Fluid type scale: min size on phones → max size on wide screens */
+  --text-xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --text-sm: clamp(0.84rem, 0.82rem + 0.12vw, 0.9rem);
+  --text-base: clamp(1rem, 0.97rem + 0.15vw, 1.08rem);
+  --text-lg: clamp(1.12rem, 1.06rem + 0.3vw, 1.28rem);
+  --text-xl: clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
+  --text-2xl: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
+  --text-3xl: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  --text-4xl: clamp(2.4rem, 1.8rem + 2.8vw, 4rem);
+  --text-5xl: clamp(2.8rem, 2rem + 4vw, 5.2rem);
+  --text-6xl: clamp(3.2rem, 2.2rem + 5vw, 6.4rem);
+
+  --h1: var(--text-5xl);
+  --h2: var(--text-4xl);
+  --h3: var(--text-2xl);
+  --h4: var(--text-xl);
+  --h5: var(--text-lg);
+  --h6: var(--text-base);
+  --body: var(--text-base);
+  --small: var(--text-sm);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.3;
+  --leading-body: 1.65;
+  --tracking-wide: 0.18em;
+  --tracking-wider: 0.28em;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section-pad: clamp(4rem, 3rem + 5vw, 8rem);
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --container: 1280px;
+  --container-narrow: 820px;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --radius-arch: 999px 999px 18px 18px;
+
+  /* Components */
+  --header-h: 72px;
+  --concept-bar-h: 36px;
+  --tap: 44px;
+  --btn-pad-y: 0.95rem;
+  --btn-pad-x: 1.8rem;
+  --btn-pad-y-sm: 0.65rem;
+  --btn-pad-x-sm: 1.15rem;
+  --card-pad: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+  --icon: 1.15em;
+
+  /* Motion */
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 700ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --transition: var(--dur) var(--ease);
+  --lift: -4px;
+  --zoom: 1.05;
+  --marquee-speed: 38s;
+
+  /* Layers */
+  --z-header: 50;
+  --z-menu: 60;
+  --z-float: 40;
+  --z-dialog: 80;
+
+  /* Breakpoints (for reference — CSS media queries can't read variables):
+     480px phone-lg · 768px tablet · 1024px laptop · 1280px desktop */
+}
+
+/* ---------- Bottle drawing (caps, glass, label) — same in every theme ---------- */
+:root {
+  --bottle-gold-a: #e9cf8f;
+  --bottle-gold-b: #a8823c;
+  --bottle-black-a: #3a3631;
+  --bottle-black-b: #0d0c0b;
+  --bottle-silver-a: #f2f2ef;
+  --bottle-silver-b: #9a9a96;
+  --bottle-wood-a: #b8875a;
+  --bottle-wood-b: #6d4628;
+  --bottle-glass: rgba(255, 255, 255, 0.42);
+  --bottle-edge: rgba(255, 255, 255, 0.7);
+  --bottle-shade: rgba(20, 17, 13, 0.22);
+  --bottle-label: #fffdf8;
+  --bottle-label-text: #141414;
+  --media-glow: rgba(255, 253, 248, 0.85); /* soft light behind product drawings */
+}
+
+/* ---------- Theme: Cream (default, matches the black-on-cream look) ---------- */
+:root,
+[data-theme="cream"] {
+  --color-bg: #f6f1e8;
+  --color-surface: #fffdf8;
+  --color-surface-2: #efe7da;
+  --color-text: #141414;
+  --color-muted: #5e574d;
+  --color-accent: #7a5c25;      /* gold for text/links — 5.5:1 on cream */
+  --color-accent-soft: #a8823c; /* gold for lines/icons only — 3.1:1 */
+  --color-border: #ddd3c3;
+  --color-on-accent: #fffdf8;
+  --color-btn: #141414;
+  --color-btn-text: #fffdf8;
+  --color-btn-hover: #2b2722;
+  --color-focus: #7a5c25;
+  --color-overlay: rgba(20, 17, 13, 0.55);
+  --shadow-sm: 0 1px 2px rgba(20, 17, 13, 0.06), 0 2px 8px rgba(20, 17, 13, 0.04);
+  --shadow-md: 0 10px 30px -12px rgba(20, 17, 13, 0.22);
+  --hover-shadow: 0 22px 44px -18px rgba(20, 17, 13, 0.3);
+
+  /* Night tone values (used by data-tone="night") */
+  --night-bg: #14110d;
+  --night-surface: #1f1a14;
+  --night-surface-2: #2a231b;
+  --night-text: #f6f1e8;
+  --night-muted: #cfc5b4;   /* 10.9:1 on night */
+  --night-accent: #c9a45c;  /* 8:1 on night */
+  --night-border: #3a3127;
+}
+
+/* ---------- Theme: Noir (all dark, black and gold) ---------- */
+[data-theme="noir"] {
+  --color-bg: #0f0d0a;
+  --color-surface: #19150f;
+  --color-surface-2: #241e16;
+  --color-text: #f3ede2;
+  --color-muted: #c4b9a6;
+  --color-accent: #d4b06a;
+  --color-accent-soft: #a8823c;
+  --color-border: #362d22;
+  --color-on-accent: #0f0d0a;
+  --color-btn: #d4b06a;
+  --color-btn-text: #0f0d0a;
+  --color-btn-hover: #e2c487;
+  --color-focus: #d4b06a;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  --hover-shadow: 0 22px 44px -18px rgba(0, 0, 0, 0.75);
+}
+
+/* ---------- Theme: Blush (soft pink, for a women-first shop) ---------- */
+[data-theme="blush"] {
+  --color-bg: #f8efec;
+  --color-surface: #fffaf8;
+  --color-surface-2: #f1e2dd;
+  --color-text: #1d1416;
+  --color-muted: #64545a;
+  --color-accent: #8a3b4a;
+  --color-accent-soft: #c07a87;
+  --color-border: #e5d2cc;
+  --color-on-accent: #fffaf8;
+  --color-btn: #1d1416;
+  --color-btn-text: #fffaf8;
+  --color-btn-hover: #3a2a2e;
+  --color-focus: #8a3b4a;
+}
+
+/* ---------- Theme: Sea (fresh blue, for a sport/daily shop) ---------- */
+[data-theme="sea"] {
+  --color-bg: #eef3f4;
+  --color-surface: #fbfdfd;
+  --color-surface-2: #dfe9eb;
+  --color-text: #0e1a1f;
+  --color-muted: #4b5c62;
+  --color-accent: #1f5a6b;
+  --color-accent-soft: #5d97a6;
+  --color-border: #cbdadd;
+  --color-on-accent: #fbfdfd;
+  --color-btn: #0e1a1f;
+  --color-btn-text: #fbfdfd;
+  --color-btn-hover: #213239;
+  --color-focus: #1f5a6b;
+}
+
+/* ---------- Night tone: a dark section inside a light theme ---------- */
+[data-tone="night"] {
+  --color-bg: var(--night-bg);
+  --color-surface: var(--night-surface);
+  --color-surface-2: var(--night-surface-2);
+  --color-text: var(--night-text);
+  --color-muted: var(--night-muted);
+  --color-accent: var(--night-accent);
+  --color-border: var(--night-border);
+  --color-btn: var(--night-accent);
+  --color-btn-text: var(--night-bg);
+  --color-btn-hover: var(--night-text);
+  --color-focus: var(--night-accent);
+}
