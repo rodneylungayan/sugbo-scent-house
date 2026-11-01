@@ -104,6 +104,15 @@
   color: var(--color-muted);
 }
 
+.credit {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
 .toTop {
   display: inline-flex;
   align-items: center;
@@ -116,6 +125,7 @@
 @media (hover: hover) {
   .links a:hover,
   .contact a:hover,
+  .credit:hover,
   .toTop:hover {
     color: var(--color-accent);
   }

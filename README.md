@@ -155,4 +155,4 @@ from Google Fonts under the SIL Open Font License.
 
 ---
 
-Designed and built by [Rodney Lungayan](https://github.com/rodneylungayan).
+Designed and built by [Mactan Digital](https://www.mactandigital.com).

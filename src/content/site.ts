@@ -29,6 +29,8 @@ export type SiteInfo = {
   foundingNote: string;
   /** Set by hand so pages stay fully static (no clock reads at build/run time). */
   copyrightYear: number;
+  /** "Designed and built by" credit in the footer */
+  builtBy: { name: string; url: string };
 };
 
 export const site: SiteInfo = {
@@ -67,6 +69,7 @@ export const site: SiteInfo = {
   quotePath: "/visit#contact",
   foundingNote: "Sugbo is the old name of Cebu, used long before the city had its modern name.",
   copyrightYear: 2026,
+  builtBy: { name: "Mactan Digital", url: "https://www.mactandigital.com" },
 };
 
 export const conceptNotice =

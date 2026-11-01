@@ -84,6 +84,12 @@ export function Footer() {
           <p>
             © {year} {site.name}. A concept store design. Sample products and prices.
           </p>
+          <p>
+            Designed and built by{" "}
+            <a href={site.builtBy.url} target="_blank" rel="noopener noreferrer" className={styles.credit}>
+              {site.builtBy.name}
+            </a>
+          </p>
           <a href="#top" className={styles.toTop}>
             Back to top <Icon name="arrowUp" />
           </a>
