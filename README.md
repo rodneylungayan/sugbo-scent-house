@@ -4,6 +4,8 @@ A **concept website** for a local perfume shop in **Cebu City, Philippines**. It
 perfume business what its own online store could look like: browse by mood, read the scent notes,
 and order with one tap on Messenger.
 
+**Live preview: [sugboscenthouse.mactandigital.com](https://sugboscenthouse.mactandigital.com/)**
+
 > **This is a concept, not a real shop.** "Sugbo Scent House" is a made-up brand. All scents,
 > prices and contact details are samples. No real perfume brands, bottles or "inspired by"
 > names are used. The site tells search engines not to list it (`noindex`).
@@ -109,7 +111,9 @@ scripts/        TODO list, asset check, link crawl
 ## Deploy
 
 1. Import the repo in [Vercel](https://vercel.com/new).
-2. Set the environment variable `NEXT_PUBLIC_SITE_URL` to your domain (for example `https://example.com`).
+2. Add your domain in Vercel and set the environment variable `NEXT_PUBLIC_SITE_URL` to it
+   (for example `https://example.com`). Without it, the site uses the address in `src/content/site.ts`
+   (currently `https://sugboscenthouse.mactandigital.com`).
 3. Deploy, then turn on **Web Analytics** and **Speed Insights** in the Vercel project.
 4. Check the share preview with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) ("Scrape Again").
 

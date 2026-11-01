@@ -39,8 +39,8 @@ export const site: SiteInfo = {
   tagline: "Perfume made for Cebu days and nights",
   description:
     "A local perfume house in Cebu City. Fresh scents for hot days, rich scents for big nights. Order on Messenger, with same-day delivery in Metro Cebu.",
-  // TODO: replace with the real live domain.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sugbo-scent-house.vercel.app",
+  // Live concept preview. For a real client, change this (or set NEXT_PUBLIC_SITE_URL).
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sugboscenthouse.mactandigital.com",
   locale: "en_PH",
   lang: "en-PH",
   // TODO: real email (this is a placeholder that is safe to show).
