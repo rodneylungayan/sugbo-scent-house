@@ -111,6 +111,9 @@
   --bottle-label: #fffdf8;
   --bottle-label-text: #141414;
   --media-glow: rgba(255, 253, 248, 0.85); /* soft light behind product drawings */
+  /* Dark fade over photos so light text stays readable */
+  --photo-shade-strong: rgba(14, 11, 8, 0.9);
+  --photo-shade-mid: rgba(14, 11, 8, 0.55);
 }
 
 /* ---------- Theme: Cream (default, matches the black-on-cream look) ---------- */

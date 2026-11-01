@@ -2,7 +2,8 @@ import Link from "next/link";
 import { hero } from "@/content/home";
 import { getProduct, type Product } from "@/content/products";
 import { formatPrice } from "@/lib/format";
-import { Bottle } from "../Bottle";
+import Image from "next/image";
+import { scenePhotos } from "@/content/photos";
 import { OrderButton } from "../OrderButton";
 import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
@@ -33,12 +34,15 @@ export function Hero() {
           </div>
 
           <div className={styles.visual}>
-            <div className={styles.arch} aria-hidden="true">
-              {featured.map((p, i) => (
-                <div key={p.slug} className={styles.bottle} data-pos={i}>
-                  <Bottle uid={`hero-${p.slug}`} {...p.bottle} />
-                </div>
-              ))}
+            <div className={styles.arch}>
+              <Image
+                src={scenePhotos.hero.src}
+                alt={scenePhotos.hero.alt}
+                fill
+                priority
+                sizes="(max-width: 899px) 100vw, 512px"
+                className={styles.photo}
+              />
             </div>
             {signature && (
               <Link href={`/products/${signature.slug}`} className={styles.tag}>

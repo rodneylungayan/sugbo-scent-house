@@ -2,18 +2,31 @@
   background: linear-gradient(160deg, var(--grad-a), var(--grad-b));
   border-color: transparent;
   color: var(--color-text);
+  aspect-ratio: 4 / 5;
   min-height: 22rem;
 }
 
 .collection .link {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: var(--space-4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: var(--card-pad);
-  padding-bottom: 0;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--photo-shade-strong) 0%, var(--photo-shade-mid) 45%, transparent 75%);
+  pointer-events: none;
 }
 
 .text {
+  position: relative;
   display: grid;
   gap: var(--space-2);
 }
@@ -49,24 +62,6 @@
 
 .arrow {
   transition: transform var(--transition);
-}
-
-.bottles {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4%;
-  padding-top: var(--space-4);
-  transform-origin: 50% 100%;
-}
-
-.bottle {
-  width: 30%;
-  margin-bottom: -6%;
-}
-
-.bottle[data-pos="1"] {
-  width: 37%;
 }
 
 .large .name {

@@ -18,7 +18,8 @@ perfume shop online. Not a real business, and not based on any real shop's name 
 - 16 made-up scents with Cebu place names, grouped by mood: Daily Fresh, Seductive,
   Gym & Sport, Night Out — plus For Him / For Her.
 - Peso prices labelled "sample". **No real brand names, bottles or "inspired by" lines.**
-- Drawn SVG bottles instead of photos.
+- Real photos from Unsplash (free licence): plain unbranded bottles for each scent, Cebu
+  scenery for collections/About/Visit. Drawn SVG bottles remain as a fallback. Credits on the About page.
 
 ## Pages
 Home · Shop All · 6 collection pages · 16 product pages · About · Visit Us · 404

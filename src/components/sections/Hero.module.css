@@ -52,53 +52,25 @@
 
 .arch {
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 1%;
   width: min(100%, 32rem);
-  aspect-ratio: 4 / 4.6;
-  padding: 0 4% 9%;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-arch);
-  background:
-    radial-gradient(circle at 50% 30%, var(--color-surface) 0%, transparent 70%),
-    var(--color-surface-2);
+  overflow: hidden;
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
 }
 
-.bottle {
-  width: 32%;
+.photo {
+  object-fit: cover;
 }
 
-.bottle[data-pos="0"] {
-  order: 2;
-  width: 44%;
+:global(.motion) .photo {
+  animation: settle var(--dur-slow) var(--ease) both;
 }
 
-.bottle[data-pos="1"] {
-  order: 1;
-}
-
-.bottle[data-pos="2"] {
-  order: 3;
-}
-
-:global(.motion) .bottle {
-  animation: rise var(--dur-slow) var(--ease) both;
-}
-
-:global(.motion) .bottle[data-pos="1"] {
-  animation-delay: 150ms;
-}
-
-:global(.motion) .bottle[data-pos="2"] {
-  animation-delay: 300ms;
-}
-
-@keyframes rise {
+@keyframes settle {
   from {
-    opacity: 0;
-    transform: translateY(24px);
+    transform: scale(1.06);
   }
 }
 

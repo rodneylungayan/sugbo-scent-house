@@ -1,17 +1,12 @@
 .visual {
-  display: grid;
-  place-items: end center;
+  position: relative;
   width: min(100%, 30rem);
   aspect-ratio: 4 / 5;
-  padding-bottom: 10%;
   border-radius: var(--radius-arch);
+  overflow: hidden;
   background:
     radial-gradient(circle at 50% 35%, var(--media-glow) 0%, transparent 65%),
     var(--tint, var(--color-surface-2));
-}
-
-.bottle {
-  width: 52%;
 }
 
 .buy {

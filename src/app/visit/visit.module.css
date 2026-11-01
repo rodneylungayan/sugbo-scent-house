@@ -52,3 +52,16 @@
   font-size: var(--text-xs);
   color: var(--color-muted);
 }
+
+.visual {
+  position: relative;
+  width: min(100%, 30rem);
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-2);
+}
+
+.photo {
+  object-fit: cover;
+}

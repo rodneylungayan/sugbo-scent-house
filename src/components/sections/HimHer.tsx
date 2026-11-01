@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { himHerSection } from "@/content/home";
 import { getProduct, productsIn } from "@/content/products";
-import { Bottle } from "../Bottle";
+import { ProductImage } from "../ProductImage";
 import { Section } from "../layout/Section";
 import { Icon } from "../ui/Icon";
 import card from "../ui/Card.module.css";
@@ -33,8 +33,13 @@ export function HimHer({ index }: { index?: number }) {
                   </p>
                 </div>
                 {product && (
-                  <div className={`${card.mediaInner} ${styles.bottle}`} aria-hidden="true">
-                    <Bottle uid={`himher-${product.slug}`} {...product.bottle} />
+                  <div className={styles.photoWrap}>
+                    <ProductImage
+                      product={product}
+                      uid={`himher-${product.slug}`}
+                      sizes="(max-width: 767px) 40vw, 220px"
+                      className={card.mediaInner}
+                    />
                   </div>
                 )}
               </Link>

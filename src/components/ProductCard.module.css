@@ -11,12 +11,8 @@
     var(--tint, var(--color-surface-2));
 }
 
-.bottle {
-  width: 62%;
-  padding-top: 6%;
-}
-
 .flag {
+  z-index: 1;
   position: absolute;
   top: var(--space-3);
   left: var(--space-3);

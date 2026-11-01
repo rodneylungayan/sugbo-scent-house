@@ -1,8 +1,9 @@
 import { collections } from "@/content/collections";
 import { storySection } from "@/content/home";
-import { getProduct, products } from "@/content/products";
+import { products } from "@/content/products";
 import { site } from "@/content/site";
-import { Bottle } from "../Bottle";
+import Image from "next/image";
+import { scenePhotos } from "@/content/photos";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
 import styles from "./Story.module.css";
@@ -11,7 +12,6 @@ import styles from "./Story.module.css";
 const SAME_DAY_CITIES = site.areasServed.filter((a) => a !== "Philippines").length;
 
 export function Story({ index }: { index?: number }) {
-  const signature = getProduct("sugbo-gold");
   const stats = [
     { value: products.length, label: storySection.statLabels.scents },
     { value: collections.length, label: storySection.statLabels.collections },
@@ -21,12 +21,14 @@ export function Story({ index }: { index?: number }) {
   return (
     <Section id="story" index={index}>
       <div className={styles.grid}>
-        <div className={`${styles.visual} reveal`} aria-hidden="true">
-          {signature && (
-            <div className={styles.bottle}>
-              <Bottle uid="story-signature" {...signature.bottle} />
-            </div>
-          )}
+        <div className={`${styles.visual} reveal`}>
+          <Image
+            src={scenePhotos.story.src}
+            alt={scenePhotos.story.alt}
+            fill
+            sizes="(max-width: 899px) 100vw, 448px"
+            className={styles.photo}
+          />
         </div>
         <div className={styles.text}>
           <p className="eyebrow reveal">

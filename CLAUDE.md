@@ -9,6 +9,9 @@ perfume shop website could look like. Full brief: `docs/site-brief.md`.
 - Made-up brand: **Sugbo Scent House**, Cebu City. Sample products and prices only.
 - Never use real perfume brand names, bottles or "inspired by" lines. Never use a real shop's name or details.
 - No database, no API routes, no server data fetching. All content lives in `src/content/`.
+- Photos: free Unsplash photos only, **plain unbranded bottles** (no brand names, logos or famous
+  designer bottle shapes). Every photo + credit lives in `src/content/photos.ts`; credits show on
+  the About page and in the README. A product without a photo falls back to the drawn `<Bottle>`.
 - Cache Components is on (`next.config.ts`): no `dynamicParams` (use `ensureStatic` + `notFound()`),
   no `new Date()`/`Math.random()` in server components, no async fs in image routes
   (use `readFileSync`), avoid `usePathname` in the layout.

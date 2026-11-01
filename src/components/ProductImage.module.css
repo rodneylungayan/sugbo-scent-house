@@ -1,0 +1,15 @@
+.photo {
+  object-fit: cover;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.bottle {
+  width: 60%;
+  padding-top: 6%;
+}

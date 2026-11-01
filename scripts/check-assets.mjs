@@ -6,7 +6,7 @@ import { join } from "node:path";
 const required = ["public/images/logo/logo.svg"];
 const MAX_BYTES = 400 * 1024; // keep photos under ~400 KB (WebP)
 // Optional slots: folder → expected width/height ratio
-const slots = { hero: 16 / 9, products: 4 / 5, collections: 4 / 5, "og-default": 1200 / 630 };
+const slots = { hero: 4 / 5, products: 4 / 5, collections: 4 / 5, scenes: null, "og-default": 1200 / 630 };
 
 let problems = 0;
 const warn = (msg) => {
@@ -40,7 +40,7 @@ for (const [slot, ratio] of Object.entries(slots)) {
     if (bytes > MAX_BYTES) warn(`${path} is ${Math.round(bytes / 1024)} KB (aim for under ${MAX_BYTES / 1024} KB).`);
     const buf = readFileSync(path);
     const size = pngSize(buf) ?? webpSize(buf);
-    if (size && Math.abs(size.w / size.h - ratio) > 0.03) {
+    if (ratio && size && Math.abs(size.w / size.h - ratio) > 0.03) {
       warn(`${path} is ${size.w}×${size.h}; this slot expects a ${ratio.toFixed(2)} ratio.`);
     }
   }

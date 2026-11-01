@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 import { productSchema } from "@/lib/schema";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
-import { Bottle } from "@/components/Bottle";
+import { ProductImage } from "@/components/ProductImage";
 import { OrderButton } from "@/components/OrderButton";
 import { ProductCard } from "@/components/ProductCard";
 import { Badge } from "@/components/ui/Badge";
@@ -74,9 +74,7 @@ export default async function ProductPage({ params }: Props) {
       schema={[productSchema(product)]}
       visual={
         <div className={styles.visual} style={{ "--tint": product.bottle.tint } as React.CSSProperties}>
-          <div className={styles.bottle}>
-            <Bottle uid={`pdp-${product.slug}`} {...product.bottle} />
-          </div>
+          <ProductImage product={product} uid={`pdp-${product.slug}`} sizes="(max-width: 899px) 100vw, 480px" priority />
         </div>
       }
       headerExtra={

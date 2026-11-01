@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { genderLabel, type Product } from "@/content/products";
 import { formatPrice, notesLine } from "@/lib/format";
-import { Bottle } from "./Bottle";
+import { ProductImage } from "./ProductImage";
 import { Badge } from "./ui/Badge";
 import card from "./ui/Card.module.css";
 import styles from "./ProductCard.module.css";
@@ -21,9 +21,12 @@ export function ProductCard({ product, headingLevel: Heading = "h3", delay = 0 }
     >
       <Link href={`/products/${product.slug}`} className={card.link}>
         <div className={`${card.media} ${styles.media}`}>
-          <div className={`${card.mediaInner} ${styles.bottle}`}>
-            <Bottle uid={`card-${product.slug}`} {...product.bottle} />
-          </div>
+          <ProductImage
+            product={product}
+            uid={`card-${product.slug}`}
+            sizes="(max-width: 767px) 50vw, (max-width: 1099px) 33vw, 300px"
+            className={card.mediaInner}
+          />
           {product.bestseller && (
             <Badge variant="solid" className={styles.flag}>
               Best seller

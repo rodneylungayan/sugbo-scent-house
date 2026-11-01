@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { visitFaqs } from "@/content/faqs";
+import { scenePhotos } from "@/content/photos";
 import { deliverySection } from "@/content/home";
 import { pages } from "@/content/pages";
 import { site } from "@/content/site";
@@ -26,6 +28,18 @@ export default function VisitPage() {
       ]}
       faqs={visitFaqs}
       schema={[storeSchema()]}
+      visual={
+        <div className={styles.visual}>
+          <Image
+            src={scenePhotos.cebuLookout.src}
+            alt={scenePhotos.cebuLookout.alt}
+            fill
+            priority
+            sizes="(max-width: 899px) 100vw, 480px"
+            className={styles.photo}
+          />
+        </div>
+      }
     >
       <Section id="shop-info" label="The shop" title="Come and try a scent" tone="surface">
         <div className={styles.cards}>

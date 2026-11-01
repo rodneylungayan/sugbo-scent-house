@@ -12,21 +12,18 @@
 }
 
 .visual {
-  display: grid;
-  place-items: end center;
+  position: relative;
   aspect-ratio: 4 / 5;
   max-width: 28rem;
   width: 100%;
   margin-inline: auto;
-  padding-bottom: 12%;
   border-radius: var(--radius-arch);
-  background:
-    radial-gradient(circle at 50% 35%, var(--color-surface) 0%, transparent 65%),
-    var(--color-surface-2);
+  overflow: hidden;
+  background: var(--color-surface-2);
 }
 
-.bottle {
-  width: 48%;
+.photo {
+  object-fit: cover;
 }
 
 .text {
