@@ -44,3 +44,5 @@ Warm and calm. Explain scents like you'd tell a friend. No jargon in visible cop
 
 ## Workflow
 New work goes on a branch (not `master`). Don't push, merge or deploy without Rodney's OK.
+Commits are Rodney's alone: no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code"
+line, no AI attribution in commit messages or PR descriptions.
